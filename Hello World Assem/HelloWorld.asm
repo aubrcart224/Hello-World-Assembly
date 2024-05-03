@@ -18,8 +18,8 @@ main proc
 	sub rsp, 28h		;allocated shadow space for function calls 
 
 	move rcx, 0			;handle to parent window (NULL)
-	lea rdx, [caption]	; Second param :dialog title 
-	lea r8, [message]	; 3rd param : dialog message
+	lea rdx, [CAP]	; Second param :dialog title 
+	lea r8, [Hello world]	; 3rd param : dialog message
 	mov r9d, 0			; 4th param : MB_OK
 
 	call MessageBoxA	; call the MessageBoxA api
